@@ -87,7 +87,7 @@ void palindrome()
     if(num==rev)
     printf("\n The given number is palindrome\n");
     else 
-    printf("\nThe given  umber is not palindrome\n");
+    printf("\nThe given  number is not palindrome\n");
  }
 
     void display()
