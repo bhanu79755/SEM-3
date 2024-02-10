@@ -37,3 +37,18 @@ void create()
         first=temp;
     }
 }
+void display()
+{
+    temp=first;
+    if(temp==NULL)
+    {
+        printf("\nLINKED LIST IS EMPTY FROM BEGINNING:\n");
+        while(temp!=NULL)
+        {
+            printf("%s%s%s%d%lld",temp->usn,temp->name,temp->branch,temp->sem,temp->phno);
+            temp=temp->next;
+        }
+        printf("NO OF STUDENTS=%d",count);
+
+    }
+}
