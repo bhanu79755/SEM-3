@@ -51,4 +51,46 @@ void display()
         printf("NO OF STUDENTS=%d",count);
 
     }
+}if
+void insert_atend()
+{
+    if(first==NULL)
+   {
+    first=temp;
+  }
+else
+  {
+    last=first;
+    while(last->next!=NULL)
+    {
+        last=last->next;
+    }
+    last->next=temp;
+  }
+}
+void delete_atend()
+{
+    last=first;
+    if(first==NULL)
+    {
+        printf("LIST IS EMPTY\n");
+        return;
+    }
+    else iff(last->next==NULL)
+    {
+        printf("%s%s%s%d%lld\n",last->usn,last->name,last->branch,last->sem,last->phno);
+        free(last);
+        first=NULL;
+    }
+    else{
+        while(last->next!=NULL)
+        {
+            prev=last;
+            last=last->next;
+        }
+        printf("%s%s%s%d%lld",last->usn,;last->name,last->branch,last->sem,last->branch,last->phno);
+        free(last);
+        prev->next=NULL;
+    }
+    count--;
 }
