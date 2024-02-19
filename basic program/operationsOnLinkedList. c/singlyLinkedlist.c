@@ -51,7 +51,7 @@ void display()
         printf("NO OF STUDENTS=%d",count);
 
     }
-}if
+}
 void insert_atend()
 {
     if(first==NULL)
@@ -76,7 +76,7 @@ void delete_atend()
         printf("LIST IS EMPTY\n");
         return;
     }
-    else iff(last->next==NULL)
+    else if(last->next==NULL)
     {
         printf("%s%s%s%d%lld\n",last->usn,last->name,last->branch,last->sem,last->phno);
         free(last);
@@ -94,3 +94,35 @@ void delete_atend()
     }
     count--;
 }
+void insert_atfront()
+{
+    if(first==NULL)
+    {
+        first=temp;
+    }
+    else{
+        temp->next=first;
+        first=temp;
+    }
+}
+void delete_atfront()
+{
+    temp=first;
+    if(first==NULL)
+    {
+        printf("LIST IS EMPTY\n");
+    }
+    elseif(temp->next==NULL)
+    {
+        printf("%s%s%s%d%lld",temp->usn,temp->name,temp->branch,temp->sem,temp->phno);
+        free(temp);
+        first=NULL;
+    }
+    else{
+        printf("%s%s%s%d%lld",temp->usn,temp->name,temp->branch,temp-.sem,temp->phno);
+        first=temp->next;
+        free(temp);
+    }
+    count--;
+}
+
