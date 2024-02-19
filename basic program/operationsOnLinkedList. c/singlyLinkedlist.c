@@ -125,4 +125,47 @@ void delete_atfront()
     }
     count--;
 }
+void main()
+{
+    int choice,n,i;
+    while(1)
+    {
+        printf("\nMENU\n");
+        printf("\n1.TO CREATE A SLL OF N STUDENTS DATA BY USING FRONT INSERTION");
+        printf("\n2.DISPLAY THE STATUS OF SLL AND COUNT THE NUMBER OF NODES IN IT");
+        printf("\n3.INSERTION AT END OF SLL");
+        printf("\n4.DELETION AT END OF SLL");
+        printf("5.INSERTION AT FRONT OF SLL(DEMONSTRATION OF STACK)");
+        printf("6.DELETION AT FRONT OF SLL(DEMONSTRATION OF STACK)");
+        prinrf("\n7.EXIT\n");
+        printf("\n\n");
+        printf("ENTER YOUR CHOICE");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1:printf("\nENTER NO.OF STUDENTS:");
+                   scanf("%d",&n);
+                   for(i=0;i<n;i++)
+            {
+                   readdata();
+                   create();
+            }
+                   break;
+            case 2:display();
+                   break;
+            case 3:readdata();
+                   insert_atend();
+                   break;
+            case 4:delete_atend();
+                   break;
+            case 5:readdata();
+                   insert_atfront();
+                   break;
+            case 6:delete_atfront();
+                   break;
+            case 7:exit(0);
+            default:printf("WRONG CHOICE\n");
+        }
+    }
+}
 
