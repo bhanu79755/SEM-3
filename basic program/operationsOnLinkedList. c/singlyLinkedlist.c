@@ -42,15 +42,19 @@ void display()
     temp=first;
     if(temp==NULL)
     {
+        printf("list is empty to display\n");
+        return;
+    }
+    
         printf("\nLINKED LIST IS EMPTY FROM BEGINNING:\n");
         while(temp!=NULL)
         {
-            printf("%s%s%s%d%lld",temp->usn,temp->name,temp->branch,temp->sem,temp->phno);
+            printf("\n%s%s%s%d%lld",temp->usn,temp->name,temp->branch,temp->sem,temp->phno);
             temp=temp->next;
         }
         printf("NO OF STUDENTS=%d",count);
 
-    }
+    
 }
 void insert_atend()
 {
@@ -88,7 +92,7 @@ void delete_atend()
             prev=last;
             last=last->next;
         }
-        printf("%s%s%s%d%lld",last->usn,;last->name,last->branch,last->sem,last->branch,last->phno);
+        printf("%s%s%s%d%lld",last->usn,last->name,last->branch,last->sem,last->branch,last->phno);
         free(last);
         prev->next=NULL;
     }
@@ -111,15 +115,16 @@ void delete_atfront()
     if(first==NULL)
     {
         printf("LIST IS EMPTY\n");
+        return;
     }
-    elseif(temp->next==NULL)
+    else if(temp->next==NULL)
     {
         printf("%s%s%s%d%lld",temp->usn,temp->name,temp->branch,temp->sem,temp->phno);
         free(temp);
         first=NULL;
     }
     else{
-        printf("%s%s%s%d%lld",temp->usn,temp->name,temp->branch,temp-.sem,temp->phno);
+        printf("%s%s%s%d%lld",temp->usn,temp->name,temp->branch,temp->sem,temp->phno);
         first=temp->next;
         free(temp);
     }
@@ -137,7 +142,7 @@ void main()
         printf("\n4.DELETION AT END OF SLL");
         printf("5.INSERTION AT FRONT OF SLL(DEMONSTRATION OF STACK)");
         printf("6.DELETION AT FRONT OF SLL(DEMONSTRATION OF STACK)");
-        prinrf("\n7.EXIT\n");
+        printf("\n7.EXIT\n");
         printf("\n\n");
         printf("ENTER YOUR CHOICE");
         scanf("%d",&choice);
