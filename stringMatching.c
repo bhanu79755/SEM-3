@@ -8,7 +8,7 @@ void readreplacestring();
 void findandreplace();
 void main()
 {
-    printf("program to find and replace a given string\n")
+    printf("program to find and replace a given string\n");
     readstring();
     readpattren();
     readreplacestring();
@@ -16,17 +16,17 @@ void main()
 }
 void readstring()
 {
-    printf("enetr string\n");
+    printf("Enter string:\n");
     scanf("%s",str);
 }
  void readpattren()
 {
-    printf("enter pattern\n");
+    printf("Enter pattern:\n");
     scanf("%s",pat);
 }
 void readreplacestring()
 {
-    printf("enter replacment striing\n");
+    printf("Enter  replacment string:\n");
     scanf("%s,rep");
 }
 void findandreplace()
